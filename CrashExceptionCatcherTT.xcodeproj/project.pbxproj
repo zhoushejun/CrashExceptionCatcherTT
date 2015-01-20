@@ -14,6 +14,7 @@
 		18188B9C1A6E170800D2BA89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18188B9B1A6E170800D2BA89 /* Images.xcassets */; };
 		18188B9F1A6E170800D2BA89 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18188B9D1A6E170800D2BA89 /* LaunchScreen.xib */; };
 		18188BAB1A6E170900D2BA89 /* CrashExceptionCatcherTTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18188BAA1A6E170900D2BA89 /* CrashExceptionCatcherTTTests.m */; };
+		18188BB61A6E175700D2BA89 /* CrashExceptionCatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 18188BB51A6E175700D2BA89 /* CrashExceptionCatcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		18188BA41A6E170800D2BA89 /* CrashExceptionCatcherTTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrashExceptionCatcherTTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18188BA91A6E170900D2BA89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18188BAA1A6E170900D2BA89 /* CrashExceptionCatcherTTTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrashExceptionCatcherTTTests.m; sourceTree = "<group>"; };
+		18188BB41A6E175700D2BA89 /* CrashExceptionCatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashExceptionCatcher.h; sourceTree = "<group>"; };
+		18188BB51A6E175700D2BA89 /* CrashExceptionCatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrashExceptionCatcher.m; sourceTree = "<group>"; };
+		18188BB71A6E19B200D2BA89 /* CrashExceptionCatcher.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashExceptionCatcher.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				18188B931A6E170800D2BA89 /* AppDelegate.m */,
 				18188B951A6E170800D2BA89 /* ViewController.h */,
 				18188B961A6E170800D2BA89 /* ViewController.m */,
+				18188BB41A6E175700D2BA89 /* CrashExceptionCatcher.h */,
+				18188BB51A6E175700D2BA89 /* CrashExceptionCatcher.m */,
 				18188B981A6E170800D2BA89 /* Main.storyboard */,
 				18188B9B1A6E170800D2BA89 /* Images.xcassets */,
 				18188B9D1A6E170800D2BA89 /* LaunchScreen.xib */,
@@ -98,6 +104,7 @@
 			children = (
 				18188B8F1A6E170700D2BA89 /* Info.plist */,
 				18188B901A6E170800D2BA89 /* main.m */,
+				18188BB71A6E19B200D2BA89 /* CrashExceptionCatcher.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -219,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18188BB61A6E175700D2BA89 /* CrashExceptionCatcher.m in Sources */,
 				18188B971A6E170800D2BA89 /* ViewController.m in Sources */,
 				18188B941A6E170800D2BA89 /* AppDelegate.m in Sources */,
 				18188B911A6E170800D2BA89 /* main.m in Sources */,
@@ -345,6 +353,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = CrashExceptionCatcherTT/CrashExceptionCatcher.pch;
 				INFOPLIST_FILE = CrashExceptionCatcherTT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = CrashExceptionCatcherTT/CrashExceptionCatcher.pch;
 				INFOPLIST_FILE = CrashExceptionCatcherTT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,6 +424,7 @@
 				18188BB01A6E170900D2BA89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18188BB11A6E170900D2BA89 /* Build configuration list for PBXNativeTarget "CrashExceptionCatcherTTTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +433,7 @@
 				18188BB31A6E170900D2BA89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
