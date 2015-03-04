@@ -15,6 +15,18 @@ void uncaughtExceptionHandler(NSException *exception) {
     NSLog(@"%@", logInfo);
     // TODO: 提交服务器收集
     // ....
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    NSString *fileName = [NSString stringWithFormat:@"logInfo.text"];
+    NSString *logFilePath = [documentDirectory stringByAppendingPathComponent:fileName];
+    // 先删除已经存在的文件
+    NSFileManager *defaultManager = [NSFileManager defaultManager];
+    [defaultManager removeItemAtPath:logFilePath error:nil];
+    if ([defaultManager createFileAtPath:logFilePath contents:[logInfo dataUsingEncoding:NSUTF8StringEncoding] attributes:nil]) {
+        NSLog(@"OK");
+    }else {
+        NSLog(@"NO");
+    }
 }
 
 @implementation CrashExceptionCatcher
